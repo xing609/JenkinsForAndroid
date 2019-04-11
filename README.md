@@ -3,7 +3,7 @@
 目前android集成jenkins 打包主要有两种方式：1.jenkins 安装fir插件或蒲公英; 2.不使用插件，执行shell 脚本命令。  
 看了一下网上大部分教程都是讲解集成插件化打包，优点是配置速度快、复杂度低，缺点是获取的日志只能取到最新的一条，无法配置日志显示格式。  
 今天给大家介绍就是第二种实现方式，将打好的包直接上传到fir，并获取最新5条更新日志。为方便我们在外网也能打包就将环境直接布到linux 上，没有布在本机windows上，windows 上布的相对简单暂时不讲解。弄好的效果图：
-
+![image](https://github.com/xing609/JenkinsForAndroid/blob/master/img/fir_success.jpg)
 ##  Linux 环境配置
 1.升级git版本（要求git 版本2.6.0以上，解决格式化日期错误：fatal: unknown date format format:%Y-%M-%D %H:%M:%S
 ERROR: Unable to retrieve changeset）；  
@@ -62,6 +62,7 @@ sdk.dir=/usr/local/android-sdk-linux
  //将git 抓取后，直接上传到fir 上，并编号排序显示  
  fir publish app/build/outputs/apk/gjmetal/release/*.apk -c "$(git log -5 --pretty=format:'.%s  （%an,%cd）' --abbrev-commit | awk -F ':' '{print NR " " $0 }')"
 ```
+![image](https://github.com/xing609/JenkinsForAndroid/blob/master/img/jenkins_success.jpg)
 * 构建后操作  
  E-mail Notification>Recipients :512002160@qq.com(填写构建成功后的邮箱)
 ## 技术交流  
