@@ -27,11 +27,13 @@ sdk.dir=/usr/local/android-sdk-linux
 ```
 
 ## Jenkins 界面配置
-### 构建  
+* 构建  
  Invoke Gradle script>Use Gradle Wrapper 选中Make gradlew executable  
  Tasks: clean  
         assenbleRease
-### Command 脚本  
+        
+---        
+* Command 脚本  
 ``` 
  //从fir 上复制APIToken 进行登录  
  fir login 424f9722ed0fb80654fc1bb1f2ec784e  
