@@ -33,10 +33,21 @@ sdk.dir=/usr/local/android-sdk-linux
 ```
 
 ## Jenkins 界面配置
+* General
+  项目名称：test-android-xxx  
+  丢弃旧的构建：保持构建的天数:3 >保持构建的最大个数:3  
+  参数化构建过程：  
+  Git Parameter>Name:Branch>Parameter Type:Branch  
+* 源码管理  
+  Git >Repository URL：http://xxxxxx.git（建议填项目根路径）  
+  Credentials:configsrv/****  
+  Branch Specifier (blank for 'any'):选一个分支
 * 构建  
  Invoke Gradle script>Use Gradle Wrapper 选中Make gradlew executable  
  Tasks: clean  
-        assenbleRease
+        assenbleRease  
+* 构建后操作  
+ E-mail Notification>Recipients :512002160@qq.com(填写构建成功后的邮箱)
         
 ---        
 * Command 脚本  
