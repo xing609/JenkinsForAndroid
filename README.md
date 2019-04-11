@@ -1,4 +1,10 @@
- ##  Linux 环境配置
+##  Android集成jenkins+linux+fir+git 实现自动化打包  
+* 简介： 为解决android 开发经常打包费时间的问题，决定花点时间搞下jenkins 自动化，配置好后让测试自己去打包，一劳永逸。  
+目前android集成jenkins 打包主要有两种方式：1.jenkins 安装fir插件或蒲公英; 2.不使用插件，执行shell 脚本命令。  
+看了一下网上大部分教程都是讲解集成插件化打包，优点是配置速度快、复杂度低，缺点是获取的日志只能取到最新的一条，无法配置日志显示格式。  
+今天给大家介绍就是第二种实现方式，将打好的包直接上传到fir，并获取最新5条更新日志。为方便我们在外网也能打包就将环境直接布到linux 上，没有布在本机windows上，windows 上布的相对简单暂时不讲解。弄好的效果图：
+
+##  Linux 环境配置
 1.升级git版本（要求git 版本2.6.0以上，解决格式化日期错误：fatal: unknown date format format:%Y-%M-%D %H:%M:%S
 ERROR: Unable to retrieve changeset）；  
 2.配置jenkins上的git路径（全局工具配置/usr/local/git-2.8.3/bin/git）；  
