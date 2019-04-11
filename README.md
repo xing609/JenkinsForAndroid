@@ -64,3 +64,7 @@ sdk.dir=/usr/local/android-sdk-linux
  //将git 抓取后，直接上传到fir 上，并编号排序显示  
  fir publish app/build/outputs/apk/gjmetal/release/*.apk -c "$(git log -5 --pretty=format:'.%s  （%an,%cd）' --abbrev-commit | awk -F ':' '{print NR " " $0 }')"
 ```
+## 技术交流  
+*    欢迎加入Android 学习交流群：**413893967**
+   <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=5EUEsBC"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a>
+*    个人联系方式：512002160@qq.com 
