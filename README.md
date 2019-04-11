@@ -10,7 +10,10 @@ ERROR: Unable to retrieve changeset）；
 
   
  ## Android 开发版本配置
-Androidstudio 3.3.1,gradle 3.3.1  
+开发工具：Androidstudio 3.3.1,gradle 3.3.1  
+
+---
+build.gradle 文件配置  
 compileSdkVersion: 27,  
 buildToolsVersion: "28.0.3",  
 minSdkVersion    : 16,  
