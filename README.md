@@ -1,4 +1,6 @@
 ##  Android集成jenkins+linux+fir+git 实现自动化打包  
+![](https://img.shields.io/github/stars/xing609/JenkinsForAndroid.svg?style=flat-square) ![](https://img.shields.io/github/forks/xing609/JenkinsForAndroid.svg?style=flat-square) ![GitHub watchers](https://img.shields.io/github/watchers/xing609/JenkinsForAndroid.svg?style=flat-square&label=Watch)
+
 * 简介： 为解决android 开发经常打包费时间的问题，决定花点时间搞下jenkins 自动化，配置好后让测试自己去打包，一劳永逸。  
 目前android集成jenkins 打包主要有两种方式：1.jenkins 安装fir插件或蒲公英; 2.不使用插件，执行shell 脚本命令。  
 看了一下网上大部分教程都是讲解集成插件化打包，优点是配置速度快、复杂度低，缺点是获取的日志只能取到最新的一条，无法配置日志显示格式。  
